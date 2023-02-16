@@ -17,7 +17,7 @@ import java.util.List;
 
 
 @RestController
-@RequestMapping(path="/list")
+@RequestMapping(path="/paste")
 public class ListController {
     @Autowired
     private ListService listService;
@@ -36,7 +36,7 @@ public class ListController {
             return listService.getAllNotes();
     }
 
-    @DeleteMapping(path="/list/{id}")
+    @DeleteMapping(path="/delete/{id}")
         public void deleteNote(@PathVariable Integer id) {
         Note note = listService.deleteById(id);
     }
